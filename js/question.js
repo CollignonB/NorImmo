@@ -1,20 +1,16 @@
-// const allFlèches = document.querySelectorAll('visible-panel img');
-const allImg = document.getElementsByTagName('img');
+var accItem = document.getElementsByClassName('accordionObject');
+var accHD = document.getElementsByClassName('accordionObjectHeading');
 
-allFlèches.forEach(element => {
-    element.addEventListener('click', function() {
-        // const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
 
-        // const currentChoice = this.parentNode.parentNode.childNodes[3];
-
-        // console.log(this.src);
-        if(this.src.includes('flèche bas')) {
-            this.src = 'C:\Users\Rakhlur\Downloads\top-chevron.png';
-            gsap.to(currentChoice, {duration: 0.2, height: height + 32, opacity: 1, padding: '2em 1em'})
-        }
-        else if(this.src.includes('flèche haut')){
-            this.src = 'C:\Users\Rakhlur\Downloads\top-chevron.png';
-            gsap.to(currentChoice, {duration: 0.2, height: height + 0, opacity: 0, padding: '0em 1em'})
-        }
-    })
-})
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionObject close';
+    }
+    if (itemClass == 'accordionObject close') {
+        this.parentNode.className = 'accordionObject open';
+    }
+}
