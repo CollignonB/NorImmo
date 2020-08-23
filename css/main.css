@@ -94,6 +94,49 @@ textarea {
   .sub_color {
     color: #F6AE2D;
   }
+
+  /* Slideshow container */
+  .carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+    
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Next / previous button placement */
+  .next {
+    right: -100px;
+  }
+  .prev {
+    left: -100px;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
 /* ==========================================================================
    Helper classes
    ========================================================================== */
